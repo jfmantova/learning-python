@@ -1,5 +1,7 @@
-import tkinter as tk
-
-root = tk.Tk()
+from tkinter import *
+    
+root = Tk()
 root.attributes('-fullscreen', True)
-root.mainLoop()
+root.configure(background='steel blue')
+Button(root, text="Quit", command=root.destroy, width=100, height=5).pack()
+root.mainloop()
