@@ -1,7 +1,17 @@
 from tkinter import *
+
+class Application:
+    def __init__(self, master=None):
+        master.attributes('-fullscreen', True)
+        master.configure(background='green')
+        self.frame = Frame(master)
+        self.frame.pack()
+        self.width_label = Label(self.frame, text="Width: " + str(master.winfo_screenwidth()))
+        self.width_label.pack()
+        self.height_label = Label(self.frame, text="Height: " + str(master.winfo_screenheight()))
+        self.height_label.pack()
+        self.button_quit = Button(self.frame, text="Quit", command=root.destroy).pack()
     
 root = Tk()
-root.attributes('-fullscreen', True)
-root.configure(background='steel blue')
-Button(root, text="Quit", command=root.destroy, width=100, height=5).pack()
+Application(root)
 root.mainloop()
