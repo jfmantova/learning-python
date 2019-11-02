@@ -5,7 +5,7 @@ class Application:
         master.attributes('-fullscreen', True)
         master.configure(background='green')
         self.frame = Frame(master)
-        self.frame.pack()
+        self.frame.pack(side=RIGHT)
         self.width_label = Label(self.frame, text="Width: " + str(master.winfo_screenwidth()))
         self.width_label.pack()
         self.height_label = Label(self.frame, text="Height: " + str(master.winfo_screenheight()))
